@@ -1,0 +1,77 @@
+:root {
+  color-scheme: dark;
+  --bg: #090a0c;
+  --text: #f4f5f7;
+  --muted: #99a0aa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at 30% 20%, #16181d 0%, var(--bg) 45%, #060709 100%);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main {
+  min-height: 300vh;
+}
+
+.hero {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#scene {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: clamp(1rem, 4vw, 3rem);
+  left: clamp(1rem, 5vw, 4rem);
+  pointer-events: none;
+  max-width: min(42rem, 80vw);
+  text-wrap: balance;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0.4rem 0 0;
+  font-size: clamp(1.8rem, 4vw, 3.8rem);
+  line-height: 1.06;
+}
+
+.sub {
+  margin-top: 0.8rem;
+  color: #c6ccd7;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+}
+
+.spacer {
+  height: 220vh;
+}
+
+@media (max-width: 700px) {
+  .overlay {
+    left: 1rem;
+    right: 1rem;
+  }
+}
